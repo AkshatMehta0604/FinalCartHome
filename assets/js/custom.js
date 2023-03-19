@@ -57,57 +57,113 @@ var c1 = 0,
 
 function addtocart(a) {
   if (a == 0) {
-    if (c1 > 2) {
-      alert("Maximum limit Per item is 3");
-    } else {
+    console.log(c1);
+    if (c1 < 3) {
       c1 = c1 + 1;
       priceTotal = priceTotal + all_products[0].item_price;
       itemCount++;
+    } else {
+      alert("Maximum limit Per item is 3");
     }
     document.getElementById("count_one").innerHTML = c1;
   }
   if (a == 1) {
-    if (c2 > 2) {
-      alert("Maximum limit Per item is 3");
-    } else {
+    if (c2 < 3) {
       c2 = c2 + 1;
       priceTotal = priceTotal + all_products[1].item_price;
       itemCount++;
+    } else {
+      alert("Maximum limit Per item is 3");
     }
     document.getElementById("count_two").innerHTML = c2;
   }
   if (a == 2) {
-    if (c3 > 2) {
-      alert("Maximum limit Per item is 3");
-    } else {
+    if (c3 < 3) {
       c3 = c3 + 1;
       priceTotal = priceTotal + all_products[2].item_price;
       itemCount++;
+    } else {
+      alert("Maximum limit Per item is 3");
     }
     document.getElementById("count_three").innerHTML = c3;
   }
   if (a == 3) {
-    if (c4 > 2) {
-      alert("Maximum limit Per item is 3");
-    } else {
+    if (c4 < 3) {
       c4 = c4 + 1;
       priceTotal = priceTotal + all_products[3].item_price;
       itemCount++;
+    } else {
+      alert("Maximum limit Per item is 3");
     }
     document.getElementById("count_four").innerHTML = c4;
   }
   if (a == 4) {
-    if (c5 > 2) {
-      alert("Maximum limit Per item is 3");
-    } else {
+    if (c5 < 3) {
       c5 = c5 + 1;
       priceTotal = priceTotal + all_products[4].item_price;
       itemCount++;
+    } else {
+      alert("Maximum limit Per item is 3");
     }
     document.getElementById("count_five").innerHTML = c5;
   }
 
   document.getElementById("total_count").innerHTML = itemCount;
   document.getElementById("price_count").innerHTML = priceTotal;
-  console.log(c2, c2, c3, c4, c5);
+}
+function removecart(a) {
+  if (a == 0) {
+    console.log(c1);
+    if (c1 > 0) {
+      c1 = c1 - 1;
+      priceTotal = priceTotal - all_products[0].item_price;
+      itemCount--;
+    } else {
+      alert("Item is not added yet");
+    }
+    document.getElementById("count_one").innerHTML = c1;
+  }
+  if (a == 1) {
+    if (c2 > 0) {
+      c2 = c2 - 1;
+      priceTotal = priceTotal - all_products[1].item_price;
+      itemCount--;
+    } else {
+      alert("Item is not added yet");
+    }
+    document.getElementById("count_two").innerHTML = c2;
+  }
+  if (a == 2) {
+    if (c3 > 0) {
+      c3 = c3 - 1;
+      priceTotal = priceTotal - all_products[2].item_price;
+      itemCount--;
+    } else {
+      alert("Item is not added yet");
+    }
+    document.getElementById("count_three").innerHTML = c3;
+  }
+  if (a == 3) {
+    if (c4 > 0) {
+      c4 = c4 - 1;
+      priceTotal = priceTotal - all_products[3].item_price;
+      itemCount--;
+    } else {
+      alert("Item is not added yet");
+    }
+    document.getElementById("count_four").innerHTML = c4;
+  }
+  if (a == 4) {
+    if (c5 > 0) {
+      c5 = c5 - 1;
+      priceTotal = priceTotal - all_products[4].item_price;
+      itemCount--;
+    } else {
+      alert("Item is not added yet");
+    }
+    document.getElementById("count_three").innerHTML = c;
+  }
+
+  document.getElementById("total_count").innerHTML = itemCount;
+  document.getElementById("price_count").innerHTML = priceTotal;
 }
